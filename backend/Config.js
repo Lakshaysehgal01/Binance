@@ -1,5 +1,6 @@
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
+const { Mnemonic } = require('ethers');
+
 require('dotenv').config();
 
-export const MNEMONIC = process.env.MNEMONIC;
+const MNEMONIC = process.env.MNEMONIC;
+module.exports = Mnemonic;
